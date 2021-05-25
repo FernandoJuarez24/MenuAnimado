@@ -1,0 +1,119 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	font-family: 'Farro', sans-serif;
+}
+
+.menu{
+	position: fixed;
+	top:0;
+	left:0;
+	width: 100%;
+	height:60px;
+
+	display: flex;
+	justify-content: space-between;
+	align-items:center;
+	background:white;
+}
+
+.menu h1 > a{
+	margin-left: 70px;
+	text-decoration: none;
+	color:black;
+}
+.menu .btnMenu{
+	margin-right: 70px;
+	font-size: 30px;
+	cursor: pointer;
+}
+.menu .navegador{
+	position: absolute;
+	top:60px;
+	left: -100%;
+	width: 100%;
+	height: 100vh;
+	background: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+.menu .navegador ul{
+	position: relative;
+}
+
+.menu .navegador ul li{
+	text-align: center;
+	list-style: none;
+}
+.menu .navegador ul li a{
+	color:black;
+	text-decoration: none;
+	font-size: 3em;
+	padding: 5px 20px;
+	display: inline-flex;
+	font-weight: 600;
+	transition: 0.5s
+}
+.menu .navegador ul:hover li a{
+	color:grey;
+}
+.menu .navegador ul li:hover a{
+	color:black;
+	background: white;
+}
+
+.imgHeader{
+	background: url(../img/fondo.jpg);
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+}
+
+/*EFECTO NAVEGADOR*/
+.menu .navegador ul li a:before{
+	content: '';
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 5em;
+	color:rgba(0,0,0,0.1);
+	/*border-radius: 50%;*/
+	z-index: -1;
+	opacity: 0;
+	font-weight: 900;
+	text-transform: uppercase;
+	letter-spacing: 500px;
+	transition: letter-spacing 0.5s, left 0.5s;
+}
+.menu .navegador ul li a:hover:before{
+	content: attr(data-text);
+	opacity: 1;
+	letter-spacing: 10px;
+	width: 1800px;
+	height: 1800px;
+}
+.menu .navegador ul li:nth-child(6n+1) a:before{
+	background:#FD7272;
+}
+.menu .navegador ul li:nth-child(6n+2) a:before{
+	background:#25CCF7;
+}
+.menu .navegador ul li:nth-child(6n+3) a:before{
+	background:#2C3A47;
+}
+.menu .navegador ul li:nth-child(6n+4) a:before{
+	background:#9AECDB;
+}
+.menu .navegador ul li:nth-child(6n+5) a:before{
+	background:#182C61;
+}
+
